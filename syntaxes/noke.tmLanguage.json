@@ -2,6 +2,9 @@
 	"name": "NoKe",
 	"patterns": [
 		{
+			"include": "#functions"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -15,6 +18,9 @@
 		},
 		{
 			"include": "#types"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
@@ -43,7 +49,36 @@
 		},
 		"types": {
 			"name": "storage.type.noke",
-			"match": "\\b(int|float|string|bool|fun|module|class|var|)\\b"
+			"match": "\\b(int|float|string|bool|fun|module|class|var)\\b"
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.noke",
+					"match": "\\b(true|false|yep|nope|null)\\b"
+				},
+				{
+					"name": "constant.numeric.noke",
+					"match": "\\b((\\b0[bB][01]+\\b)|(\\b0[xX][0-9a-fA-F]+\\b)|([0-9]+\\b)|([0-9.]+f\\b))\\b"
+				}
+			]
+		},
+		"functions": {
+			"name": "meta.function.noke",
+			"begin": "(?=fun)",
+			"end": "{",
+			"patterns": [
+				{
+					"name": "entity.name.function.noke",
+					"match": "(?!not|yep|true|nope|false|and|or|xor|fun|module|class|if|else|disable|disabled|for|while|do)\\b[a-zA-Z_]\\w*\\b(?:\\s+)?(?=\\()"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#types"
+				}
+			]
 		}
 	},
 	"scopeName": "source.noke"

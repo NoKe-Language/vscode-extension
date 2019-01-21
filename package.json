@@ -29,6 +29,11 @@
                 "scopeName": "source.noke",
                 "path": "./syntaxes/noke.tmLanguage.json"
             }
-        ]
+        ],
+        "iconThemes": [{
+            "id" : "nokeicons",
+            "label" : "NoKe Icons",
+            "path" : "./fileicons/noke-icon-themes.json"
+        }]
     }
 }
