@@ -1,0 +1,50 @@
+{
+	"name": "NoKe",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#types"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"name": "keyword.control.noke",
+			"match": "\\b(fun|module|class|disabled|if|else|while|for|do|disable|return)\\b"
+		},
+		"strings": {
+			"name": "string.quoted.double.noke",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.noke",
+					"match": "\\\\."
+				}
+			]
+		},
+		"operators": {
+			"name": "keyword.logical.noke",
+			"match": "\\b(and|or|not|xor)\\b"
+		},
+		"comments": {
+			"name": "comment.noke",
+			"match": "#(?:[^\\n]+)?"
+		},
+		"types": {
+			"name": "storage.type.noke",
+			"match": "\\b(int|float|string|bool|fun|module|class|var|)\\b"
+		}
+	},
+	"scopeName": "source.noke"
+}
