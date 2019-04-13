@@ -26,7 +26,7 @@
 	"repository": {
 		"keywords": {
 			"name": "keyword.control.noke",
-			"match": "\\b(fun|module|class|disabled|if|else|while|for|do|disable|return)\\b"
+			"match": "\\b(fun|partial|module|class|disabled|if|else|while|for|do|disable|return)\\b"
 		},
 		"strings": {
 			"name": "string.quoted.double.noke",
@@ -45,7 +45,7 @@
 		},
 		"comments": {
 			"name": "comment.noke",
-			"match": "#(?:[^\\n]+)?"
+			"match": "\\|(?:[^\\n]+)?"
 		},
 		"types": {
 			"name": "storage.type.noke",
